@@ -34,29 +34,57 @@ class _SubjectsState extends State<Subjects> {
     return date.weekday % 7;
   }
 
-  List<String> cse = ['FDFED 1','FDFED 2','FDFED 3','IDA','CC 1','CC 2','BTA','CD','GTA','NLP','ML 1','ML 2','ICS 1','ICS 2','MIA','IR','DM','CGM'];
-  List<String> ece =['VLSI','DSP','PR','WC','MPMC','EP','ICPS'];
 
 
 
 
 
+
+  // Future<void> saveSelectedSubjects() async {
+  //   try {
+  //     final userRef = FirebaseFirestore.instance.collection('users').doc(FirebaseAuth.instance.currentUser?.uid);
+  //
+  //     await userRef.update({
+  //       "selectedSubjects": selectedSubs,
+  //     });
+  //     DateTime now = DateTime.now();
+  //     int dayOfWeekAsNumber = getDayOfWeekAsNumber(now);
+  //     print("Selected subjects updated successfully!");
+  //     Navigator.pushAndRemoveUntil(context,MaterialPageRoute(builder: (context)=>BottomBarScreen(events: widget.events,selectedIndex: 1,)),(route)=> false);
+  //   } catch (e) {
+  //     print("Error updating selected subjects: $e");
+  //   }
+  // }
 
   Future<void> saveSelectedSubjects() async {
-    try {
-      final userRef = FirebaseFirestore.instance.collection('users').doc(FirebaseAuth.instance.currentUser?.uid);
+    final userRef = FirebaseFirestore.instance.collection('users').doc(currentUserId);
 
-      await userRef.update({
-        "selectedSubjects": selectedSubs,
-      });
-      DateTime now = DateTime.now();
-      int dayOfWeekAsNumber = getDayOfWeekAsNumber(now);
+    try {
+      final docSnapshot = await userRef.get();
+
+      if (docSnapshot.exists) {
+        await userRef.update({
+          "selectedSubjects": selectedSubs,
+        });
+      } else {
+        await userRef.set({
+          "selectedSubjects": selectedSubs,
+        });
+      }
+
       print("Selected subjects updated successfully!");
-      Navigator.pushAndRemoveUntil(context,MaterialPageRoute(builder: (context)=>BottomBarScreen(events: widget.events,selectedIndex: 1,)),(route)=> false);
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BottomBarScreen(events: widget.events, selectedIndex: 1),
+        ),
+            (route) => false,
+      );
     } catch (e) {
       print("Error updating selected subjects: $e");
     }
   }
+
 
 
   @override

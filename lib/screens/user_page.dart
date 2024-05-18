@@ -197,9 +197,21 @@ class _UserPageState extends State<UserPage> {
                         ),
                       ),
                       SizedBox(height: 50,),
-                      Image.asset('assets/nextClass.png',height: 100,width: 100,),
-                      Center(child: Text('© nextClass 2023' , style: TextStyle(color: isDark ? Colors.white : Colors.black),)),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/nextClass.png',height: 80,width: 80,),
+                          SizedBox(width: 10,),
+                          Image.asset('assets/GRIET_Logo.png',width: 80,height: 80,),
+
+                        ],
+                      ),
+                      SizedBox(height: 20,),
+
+                      Center(child: Text('© nextClass 2024' , style: TextStyle(color: isDark ? Colors.white : Colors.black),)),
                       SizedBox(height:5,),
+                      Center(child: Text('© GRIET 2024' , style: TextStyle(color: isDark ? Colors.white : Colors.black),)),
+
                     ],
                   ),
                 ));

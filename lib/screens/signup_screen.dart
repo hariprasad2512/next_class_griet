@@ -145,10 +145,21 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  SizedBox(height: 40,),
+                  SizedBox(height: 100,),
+                  Text("nextClass-GRIET",style: GoogleFonts.josefinSans(fontSize: 50)),
+
+
+
                   SizedBox(height: 2,),
-                  Image.asset('assets/nextClass.png',height: 250,width: 250,),
-                  Center(child: Text("Sign Up",style: GoogleFonts.josefinSans(fontSize: 35))),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/nextClass.png',height: 300,width: 120,),
+                      SizedBox(width: 10,),
+                      Image.asset('assets/GRIET_Logo.png',width: 120,height: 120,),
+
+                    ],
+                  ),Center(child: Text("Sign Up",style: GoogleFonts.josefinSans(fontSize: 35))),
                   SizedBox(height: 30,),
                   ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(32)),

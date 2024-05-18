@@ -141,10 +141,18 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 40,),
-            Text("nextClass",style: GoogleFonts.josefinSans(fontSize: 50)),
+            SizedBox(height: 100,),
+            Text("nextClass-GRIET",style: GoogleFonts.josefinSans(fontSize: 50)),
             SizedBox(height: 2,),
-            Image.asset('assets/nextClass.png',height: 250,width: 250,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('assets/nextClass.png',height: 300,width: 120,),
+                SizedBox(width: 10,),
+                Image.asset('assets/GRIET_Logo.png',width: 120,height: 120,),
+
+              ],
+            ),
             SizedBox(height: 5,),
             SizedBox(
               height: 10.0,
@@ -236,6 +244,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 }
               }
             ),
+
 
 
           ],
