@@ -1,20 +1,31 @@
 class Slot {
-
+  final int UG;
+  final String eventName;
   final String startTime;
   final String endTime;
-  final String eventName;
+  final List<int> recurrenceDays;
   final String roomNumber;
   final bool enrolled;
-  final List<int> recurrenceDays;// List of integers representing days of the week (1 to 7).
-  final int UG;
 
-  Slot( {
+  Slot({
+    required this.UG,
     required this.eventName,
     required this.startTime,
     required this.endTime,
+    required this.recurrenceDays,
     required this.roomNumber,
     required this.enrolled,
-    required this.recurrenceDays,
-    required this.UG
   });
+
+  factory Slot.fromJson(Map<String, dynamic> json) {
+    return Slot(
+      UG: int.parse(json['UG']),
+      eventName: json['eventName'],
+      startTime: json['startTime'],
+      endTime: json['endTime'],
+      recurrenceDays: List<int>.from(json['recurrenceDays']),
+      roomNumber: json['roomNumber'],
+      enrolled: json['enrolled'],
+    );
+  }
 }
