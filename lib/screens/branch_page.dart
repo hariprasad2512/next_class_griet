@@ -7,22 +7,29 @@ import 'package:next_class/screens/subjects_page.dart';
 import '../data/slot.dart';
 
 class BranchSelection extends StatelessWidget {
-  List<String> cse = ['FDFED 1','FDFED 2','FDFED 3','IDA UG3','CC 1','CC 2','BTA','CD','GTA','NLP','ML 1','ML 2','ICS 1','ICS 2','MIA','IR','DM','CGM','ICPS UG3','QRA 1','QRA 2','QRA 3','QIC','SE UG3','PGP UG3',];
+  List<String> cseA = ['ML-CSE-A','FLAT-A','SE-CSE-A','CC-A','OE-A','ML LAB-CSE-A','UML LAB-A','MPS-A','COI-CSE-A'];
+  List<String> cseB = ['ML-CSE-B','FLAT-B','SE-CSE-B','CC-B','OE-B','ML LAB-CSE-B','UML LAB-B','MPS-B','COI-CSE-B'];
+  List<String> cseC = ['ML-CSE-C','FLAT-C','SE-CSE-C','CC-C','OE-C','ML LAB-CSE-C','UML LAB-C','MPS-C','COI-CSE-C'];
+  List<String> cseD = ['ML-CSE-D','FLAT-D','SE-CSE-D','CC-D','OE-D','ML LAB-CSE-D','UML LAB-D','MPS-D','COI-CSE-D'];
+  List<String> cseE = ['ML-CSE-E','FLAT-E','SE-CSE-E','CC-E','OE-E','ML LAB-CSE-E','UML LAB-E','MPS-E','COI-CSE-E'];
+  List<String> cseF = ['ML-CSE-F','FLAT-F','SE-CSE-F','CC-F','OE-F','ML LAB-CSE-F','UML LAB-F','MPS-F','COI-CSE-F'];
+  List<String> itA  = ['FME-A','ML-IT-A','FSD-A','UP-A','OE-A','ML LAB-IT-A','FSD LAB-A','MP LAB-A','VAC-A'];
+  List<String> itB = ['FME-B','ML-IT-B','FSD-B','UP-B','OE-B','ML LAB-IT-B','FSD LAB-B','MP LAB-B','VAC-B'];
+  List<String> itC =  ['FME-C','ML-IT-C','FSD-C','UP-C','OE-C','ML LAB-IT-C','FSD LAB-C','MP LAB-C','VAC-C'];
+  List<String> aimlA  = ['ML-A','BDA-A','CC-A','SE-A','HCI-A','ML LAB-A','BDA LAB-A','MPS-A','COI-A'];
+  List<String> aimlB = ['ML-B','BDA-B','CC-B','SE-B','HCI-B','ML LAB-B','BDA LAB-B','MPS-B','COI-B'];
+  List<String> aimlC =  ['ML-C','BDA-C','CC-C','SE-C','HCI-C','ML LAB-C','BDA LAB-C','MPS-C','COI-C'];
+  List<String> eceA =   ['DSP-A','VLSI-A','AWP-A','ESD-A','ITML-A','DSP LAB-A','VLSI LAB-A','MINI PROJECT-A','VEGC-A','NPTEL-A','MENTORING-A'];
+  List<String> eceB =  ['DSP-B','VLSI-B','AWP-B','ESD-B','ITML-B','DSP LAB-B','VLSI LAB-B','MINI PROJECT-B','VEGC-B','NPTEL-B','MENTORING-B'];
+  List<String> eceC =  ['DSP-C','VLSI-C','AWP-C','ESD-C','ITML-C','DSP LAB-C','VLSI LAB-C','MINI PROJECT-C','VEGC-C','NPTEL-C','MENTORING-C'];
+
   // List<String> ece =['VLSI','DSP','PR','WC','MPMC','EP','IDA UG3','ICPS UG3','QRA 1','QRA 2','QRA 3','SE UG3','PGP UG3','QIC',];
-
-  List<String> cse2 = ['OOP 1','OOP 2','OOP 3','OOP 4', 'RANAC 1','RANAC 2','RANAC 3','RANAC 4','ADSA 1','ADSA 2','ADSA 3','DBMS 1','DBMS 2','DBMS 3','OS 1','OS 2','OS 3','PC 1','PC 2','PC 3'];
-  List<String> ece2 = ['CNA','CS','ES','RANAC 4','OOP 4','PC 1','PC 2','PC 3'];
-  List<String> cse1 = ['DSMA 1','DSMA 2','DSMA 3','DSMA 4','DSMA 5','CP 1','CP 2','CP 3','CP 4','CP 5','DLD 1','DLD 2','DLD 3','DLD 4','DLD 5','OCW 1','OCW 2','OCW 3','OCW 4','OCW 5'];
-  List<String> ece1 = ['DSMA 1','DSMA 2','DSMA 3','DSMA 4','DSMA 5','CP 1','CP 2','CP 3','CP 4','CP 5','DLD 1','DLD 2','DLD 3','DLD 4','DLD 5','OCW 1','OCW 2','OCW 3','OCW 4','OCW 5'];
-  List<String> cse4 = ['FQC','VAR','IOT','ICPS UG4','IDA UG4','CRYPTO','DIP','DTCA','BDA','SCEAI','RL','DSD','MERS','PGP UG4','IAE 1','IAE 2','SE UG4','ITPM','ICT'];
-  List<String> ece4 = ['FQC','VAR','IOT','ICPS UG4','IDA UG4','CRYPTO','DIP','DTCA','BDA','SCEAI','RL','DSD','MERS','PGP UG4','IAE 1','IAE 2','SE UG4','ITPM','ICT'];
-  List<String> aiml = ['ML','SE','ML LAB','BDA','BDA LAB','CC','HCI','COI','MPS'];
-
-  List<String> eceA = ['DSP-A','DSP LAB/VLSI LAB-A','MENTORING-A','MINI PROJECT-A','VLSI-A','AWP-A','ESD/ITML-A','NPTEL/PROJECT-A','VEGC-A'];
-  List<String> eceB = ['DSP-B','DSP LAB/VLSI LAB-B','MENTORING-B','MINI PROJECT-B','VLSI-B','AWP-B','ESD/ITML-B','NPTEL/PROJECT-B','VEGC-B'];
-  List<String> eceC = ['DSP-C','DSP LAB/VLSI LAB-C','MENTORING-C','MINI PROJECT-C','VLSI-C','AWP-C','ESD/ITML-C','NPTEL/PROJECT-C','VEGC-C'];
-
-
+  List<String> cse1 = ['ML-A','FLAT-A','SE-A','CC-A','OE-A','ML LAB-A','UML LAB-A','MPS-A','COI-A'];
+  List<String> ece1 = ['ML-A','FLAT-A','SE-A','CC-A','OE-A','ML LAB-A','UML LAB-A','MPS-A','COI-A'];
+  List<String> cse2 = ['ML-A','FLAT-A','SE-A','CC-A','OE-A','ML LAB-A','UML LAB-A','MPS-A','COI-A'];
+  List<String> ece2 = ['ML-A','FLAT-A','SE-A','CC-A','OE-A','ML LAB-A','UML LAB-A','MPS-A','COI-A'];
+  List<String> cse4 = ['ML-A','FLAT-A','SE-A','CC-A','OE-A','ML LAB-A','UML LAB-A','MPS-A','COI-A'];
+  List<String> ece4 = ['ML-A','FLAT-A','SE-A','CC-A','OE-A','ML LAB-A','UML LAB-A','MPS-A','COI-A'];
 
   final List<Slot> events;
   final int ug;
@@ -41,28 +48,35 @@ class BranchSelection extends StatelessWidget {
     {
       1: {'CSE': cse1, 'ECE': ece1},
       2: {'CSE': cse2, 'ECE': ece2},
-      3: {'CSE': cse, 'ECE-A': eceA,'ECE-B': eceB,'ECE-C': eceC, 'AI-ML': aiml},
+      3: {'CSE-A': cseA,'CSE-B': cseB,'CSE-C': cseC,'CSE-D': cseD,'CSE-E': cseE,'CSE-F': cseF, 'ECE-A': eceA,'ECE-B': eceB,'ECE-C': eceC, 'AI/ML-A': aimlA,'AI/ML-B': aimlB,'AI/ML-C': aimlC,'IT-A': itA,'IT-B': itB,'IT-C': itC,},
       4: {'CSE': cse4, 'ECE': ece4},
     };
     void _onBranchSelected(BuildContext context, String branch) async {
-      // Add the selected branch to Firestore for the current user
-      // User? currentUser = FirebaseAuth.instance.currentUser;
-      // if (currentUser == null) {
-      //   // User not signed in, handle the error or navigate to sign-in page
-      //   return;
-      // }
-      //
-      // CollectionReference usersRef = FirebaseFirestore.instance.collection('users');
-      // String uid = currentUser.uid;
-      //
-      // try {
-      //   await usersRef.doc(uid).update({
-      //     'branch': branch,
-      //   });
 
 
-      if(branch=='CSE'){
-        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['CSE'] ?? [],events: events,)));
+
+      if(branch=='CSE-A'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['CSE-A'] ?? [],events: events,)));
+      }
+      else if(branch == 'CSE-B'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['CSE-B'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'CSE-C'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['CSE-C'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'CSE-D'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['CSE-D'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'CSE-E'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['CSE-E'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'CSE-F'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['CSE-F'] ?? [],events: events,)));
+
       }
       else if(branch == 'ECE-A'){
         Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['ECE-A'] ?? [],events: events,)));
@@ -76,8 +90,32 @@ class BranchSelection extends StatelessWidget {
         Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['ECE-C'] ?? [],events: events,)));
 
       }
+      else if(branch == 'IT-A'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['IT-A'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'IT-B'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['IT-B'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'IT-C'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['IT-C'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'AI/ML-A'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['AI/ML-A'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'AI/ML-B'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['AI/ML-B'] ?? [],events: events,)));
+
+      }
+      else if(branch == 'AI/ML-C'){
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['AI/ML-C'] ?? [],events: events,)));
+
+      }
       else{
-        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['AI-ML'] ?? [],events: events,)));
+        Navigator.push((context),MaterialPageRoute(builder: (context)=>Subjects(subjects: subUGs[ug]!['CSE-A'] ?? [],events: events,)));
 
       }
       //   } catch (e) {
@@ -94,50 +132,96 @@ class BranchSelection extends StatelessWidget {
       //     Navigator.pop(context);
       //   }),
       // ),
-      
+
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Image.asset('assets/boy_falling_cropped.png',width: 250,height: 250,),
-              ],
-            ),
-            Text('Select your Branch',style: TextStyle(fontSize: 30),),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => _onBranchSelected(context, 'CSE'),
-              child: Text('CSE'),
-            ),
-            ElevatedButton(
-              onPressed: () => _onBranchSelected(context, 'ECE-A'),
-              child: Text('ECE A'),
-            ),
-            ElevatedButton(
-              onPressed: () => _onBranchSelected(context, 'ECE-B'),
-              child: Text('ECE B'),
-            ),
-            ElevatedButton(
-              onPressed: () => _onBranchSelected(context, 'ECE-C'),
-              child: Text('ECE C'),
-            ),
-            ElevatedButton(
-              onPressed: () => _onBranchSelected(context, 'AI-ML'),
-              child: Text('AI ML'),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Image.asset('assets/boy_working.png',width: 180,height: 180,),
-              ],
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset('assets/boy_falling_cropped.png',width: 250,height: 250,),
+                ],
+              ),
+              Text('Select your Branch',style: TextStyle(fontSize: 30),),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'CSE-A'),
+                child: Text('CSE-A'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'CSE-B'),
+                child: Text('CSE-B'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'CSE-C'),
+                child: Text('CSE-C'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'CSE-C'),
+                child: Text('CSE-C'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'CSE-D'),
+                child: Text('CSE-D'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'CSE-E'),
+                child: Text('CSE-E'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'CSE-F'),
+                child: Text('CSE-F'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'IT-A'),
+                child: Text('IT-A'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'IT-B'),
+                child: Text('IT-B'),
+              ),
+
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'IT-C'),
+                child: Text('IT-C'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'ECE-A'),
+                child: Text('ECE-A'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'ECE-B'),
+                child: Text('ECE-B'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'ECE-C'),
+                child: Text('ECE-C'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'AI/ML-A'),
+                child: Text('AI/ML-A'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'AI/ML-B'),
+                child: Text('AI/ML-B'),
+              ),
+              ElevatedButton(
+                onPressed: () => _onBranchSelected(context, 'AI/ML-C'),
+                child: Text('AI/ML-C'),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Image.asset('assets/boy_working.png',width: 180,height: 180,),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  }
-
+}

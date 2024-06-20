@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void getEvents() async {
-    final url = Uri.https('nextclass-e95e8-default-rtdb.firebaseio.com', 'events.json');
+    final url = Uri.https('nextclass-e95e8-default-rtdb.firebaseio.com', 'events-griet.json');
     final response = await http.get(url);
 
     if (response.statusCode == 200) {

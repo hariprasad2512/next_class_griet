@@ -208,7 +208,7 @@ class _UserPageState extends State<UserPage> {
                       ),
                       SizedBox(height: 20,),
 
-                      Center(child: Text('© nextClass 2024' , style: TextStyle(color: isDark ? Colors.white : Colors.black),)),
+                      Center(child: Text('© MINDSLATE 2024' , style: TextStyle(color: isDark ? Colors.white : Colors.black),)),
                       SizedBox(height:5,),
                       Center(child: Text('© GRIET 2024' , style: TextStyle(color: isDark ? Colors.white : Colors.black),)),
 
